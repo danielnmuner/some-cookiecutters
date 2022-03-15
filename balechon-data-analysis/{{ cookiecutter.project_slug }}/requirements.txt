@@ -1,0 +1,24 @@
+ipykernel
+ipython
+{% if cookiecutter.project_packages == "All" -%}
+jupyter
+jupyterlab
+{% endif -%}
+{% if cookiecutter.project_packages == "All" -%}
+missingno
+{% endif -%}
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+scikit-learn
+{% if cookiecutter.project_packages == "All" -%}
+keras
+pytorch
+tensorflow
+pandas-flavor
+pandas-profiling
+{% endif -%}
+plotly
+pyprojroot

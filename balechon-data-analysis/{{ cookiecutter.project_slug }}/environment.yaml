@@ -1,0 +1,35 @@
+name: {{ cookiecutter.project_slug }}
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - ipykernel
+  - ipython
+  {% if cookiecutter.project_packages == "All" -%}
+  - jupyter
+  - jupyterlab
+  {% endif -%}
+  {% if cookiecutter.project_packages == "All" -%}
+  - missingno
+  {% endif -%}
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  {% if cookiecutter.project_packages == "All" -%}
+  - keras
+  - pytorch
+  - tensorflow
+  - pandas-flavor
+  - pandas-profiling
+  {% endif -%}
+  - pip
+  - plotly
+  - pyprojroot
+  - python={{ cookiecutter.python_version }}
+
+  
+

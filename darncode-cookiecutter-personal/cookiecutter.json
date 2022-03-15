@@ -1,0 +1,9 @@
+{
+"project_name":"Project Name",
+"environment_name":"venv",
+"author_name":"{{cookiecutter.project_name.lower().replace(' ','_').replace('-','_')}}",
+"project_version":"0.1.0V",
+"project_description":"Describe your Project",
+"packages":["All","Basic"],
+"python_version":["3.9","3.7","3.5"]
+}

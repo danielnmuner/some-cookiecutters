@@ -1,0 +1,14 @@
+name: packages
+channels:
+  - defaults
+dependencies:
+  {% if cookiecutter.packages == "All" -%}
+  - cookiecutter
+  - pandas
+  - seaborn
+  {% endif -%}
+
+  {% if cookiecutter.packages == "Basic" -%}
+  - cookiecutter
+  - python={{cookiecutter.python_version}}
+  {% endif -%}
