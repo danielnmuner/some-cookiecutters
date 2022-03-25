@@ -7,9 +7,10 @@ This repo encompasses what I think is relevant and good enough to create persona
 Here are the links to go through and sure their amazing authors. 
 1. [balechon](https://github.com/balechon/cookiecutter-Data_Analysis)
 2. [jvelezmagic](https://github.com/jvelezmagic/cookiecutter-conda-data-science)
-3. [pjbull](https://github.com/drivendata/cookiecutter-data-science)
-
-## OS Module
+3. [pjbull](https://github.com/drivendata/cookiecutter-data-science)  
+### Python Directory and Files Management [programiz](https://www.programiz.com/python-programming/directory)
+---
+### OS Module
 This package abstracts the functionalities of the platform and provides the python functions to navigate, create, delete and modify files and folders. "[stackabuse](https://stackabuse.com/introduction-to-python-os-module/)"
 
 - [x] Import OS module  
@@ -40,5 +41,21 @@ Functions like ```Path()``` abstract the O.S. path structure and will use ```/``
 
 - [x] List specific files based on a pattern or wildcards
 ```list(DATA_DIR.glob(".git*"))``` Globbing is mainly used to match filenames or searching for content in a file. Globbing uses wildcard characters to create the pattern [linuxhint](https://linuxhint.com/bash_globbing_tutorial/)
+
+### PyFilesystem2
+PyFilesystem2 stand out from previous modules given that whenever we arrange a path we'll just use ```/``` separately from the O.S. for instance ``` DATA_DIR = fs .open_fs('../data/raw/') ```
+It generally resemble to prior modules when it comes to the basic functionalities.
+```
+import fs
+# Open current directory
+CURRENT_DIR=fs.open_fs('.')
+#Previous function will return a OSFS object so it's no longer a simple str
+```  
+Now if you want to iterate over pathname we can use the next function ``` walk.files()``` as shown below.
+
+```
+for path in DATA_DIR.walk.files():
+    print(path)
+```
 
 
