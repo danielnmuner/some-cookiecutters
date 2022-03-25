@@ -18,7 +18,7 @@ This package abstracts the functionalities of the platform and provides the pyth
 ```DATA_DIR=os.path.join(CURRENT_DIR,os.pardir,'data','raw') ``` os.path.join allow us to join all arguments on that function.
 - [x] Confirm ```DATA_DIR``` exist.  
 ```os.path.exists(DATA_DIR)```  
-- [x] Iterate over ```DATA_DIR``  
+- [x] Iterate over ```DATA_DIR``` using the next code    
 ```[os.path.join(DATA_DIR,item) for item in os.listdir(DATA_DIR)]``` The function ```listdir()``` turn ```DATA_DIR``` into a iterable.  
 - [x] Create a folder using ```os.mkdir()``` function.  
 ```os.mkdir(os.path.join(CURRENT_DIR,'folder_name'))``` In doing so we can create the folder in that especific path.
