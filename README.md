@@ -26,7 +26,7 @@ This package abstracts the functionalities of the platform and provides the pyth
 
 ## As an alternative, we can use the pathlib module that's easier to implement than the os module. 
 
-[x] import pathlib  
+- [x] import pathlib  
 ``` 
 import pathlib
 CURRENT_DIR = pathlib.Path().resolve()
