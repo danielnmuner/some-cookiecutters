@@ -65,13 +65,28 @@ Pyprojroot and Pyhere are modules that allow us to set up a root on a fixed fold
 
 ```pyprojroot``` finds the root working directory for your project as a pathlib object. You can now use the here function to pass in a relative path from the project root directory (no matter what working directory you are in the project), and you will get a full path to the specified file. That is, in a jupyter notebook, you can write something like `pandas.read_csv(here('./data/my_data.csv'))` instead of `pandas.read_csv('../data/my_data.csv')`. This allows you to restructure the files in your project without having to worry about changing file paths.
 
-Great for reading and writing datasets!  
-  
-### install package
+
+### Notebooks and Scripts as a team
+**Note: The following sections assume you are located in your conda environment.**
+
+## Set up project's module
+
+To move beyond notebook prototyping, all reusable code should go into the `nice_environment/` folder package. To use that package inside your project, install the project's module in editable mode, so you can edit files in the `nice_environment` folder and use the modules inside your notebooks :
+
 ```bash
-pip install pyprojroot
+pip install --editable .
 ```
 
+To use the module inside your notebooks, add `%autoreload` at the top of your notebook :
 
+```python
+%load_ext autoreload
+%autoreload 2
+```
+Example of module usage :
 
+```python
+from nice_environment.utils.paths import data_dir
+data_dir()
+```
 
