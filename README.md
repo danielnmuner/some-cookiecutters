@@ -83,10 +83,12 @@ To use the module inside your notebooks, add `%autoreload` at the top of your no
 %load_ext autoreload
 %autoreload 2
 ```
-Example of module usage :
+Example of module usage where data_dir() is a function created within `nice_environment/` so any function can be called from my notebooks, making sure previous recomendations were followed.  
 
 ```python
 from nice_environment.utils.paths import data_dir
 data_dir()
 ```
+
+
 
