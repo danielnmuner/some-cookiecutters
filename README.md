@@ -29,7 +29,7 @@ This package abstracts the functionalities of the platform and provides the pyth
 As an alternative, we can use the pathlib module that's easier to implement than the os module. 
 
 - [x] import pathlib  
-``` 
+```python
 import pathlib
 CURRENT_DIR = pathlib.Path().resolve()
 DATA_DIR = CURRENT_DIR.parent.joinpath('data')
@@ -46,7 +46,7 @@ Functions like ```Path()``` abstract the O.S. path structure and will use ```/``
 #### PyFilesystem2
 PyFilesystem2 stand out from previous modules given that whenever we arrange a path we'll just use ```/``` separately from the O.S. for instance ``` DATA_DIR = fs .open_fs('../data/raw/') ```
 It generally resemble to prior modules when it comes to the basic functionalities.
-```
+```python
 import fs
 # Open current directory
 CURRENT_DIR=fs.open_fs('.')
@@ -54,7 +54,7 @@ CURRENT_DIR=fs.open_fs('.')
 ```  
 Now if you want to iterate over pathname we can use the next function ``` walk.files()``` as shown below.
 
-```
+```python
 for path in DATA_DIR.walk.files():
     print(path)
 ```
