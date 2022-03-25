@@ -34,3 +34,11 @@ DATA_DIR = CURRENT_DIR.parent.joinpath('data')
 ```
 Functions like ```Path()``` abstract the O.S. path structure and will use ```/``` or ```\``` depending on. ```resolve()``` is a linux function that displays the path to get to current directory. Finally ```parent``` and ```joinpath``` to bring certain path.  
 
+- [x] Creating a folder with pathlib differs from the os module.  Here is the right way with pathlib.
+
+``` DATA_DIR.joinpath('pathlib').mkdir()``` Instead of specifying the path and file or folder name within the ```mkdir()``` function we'll define it before the function. 
+
+- [x] List specific files based on a pattern or wildcards
+```list(DATA_DIR.glob(".git*"))``` Globbing is mainly used to match filenames or searching for content in a file. Globbing uses wildcard characters to create the pattern [linuxhint](https://linuxhint.com/bash_globbing_tutorial/)
+
+
