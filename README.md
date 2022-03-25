@@ -24,7 +24,7 @@ This package abstracts the functionalities of the platform and provides the pyth
 - [x] Create a folder using ```os.mkdir()``` function.  
 ```os.mkdir(os.path.join(CURRENT_DIR,'folder_name'))``` In doing so we can create the folder in that especific path.
 
-## As an alternative, we can use the pathlib module that's easier to implement than the os module. 
+#### As an alternative, we can use the pathlib module that's easier to implement than the os module. 
 
 - [x] import pathlib  
 ``` 
