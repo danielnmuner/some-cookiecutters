@@ -25,7 +25,8 @@ This package abstracts the functionalities of the platform and provides the pyth
 - [x] Create a folder using ```os.mkdir()``` function.  
 ```os.mkdir(os.path.join(CURRENT_DIR,'folder_name'))``` In doing so we can create the folder in that especific path.
 
-#### As an alternative, we can use the pathlib module that's easier to implement than the os module. 
+#### pathlib 
+As an alternative, we can use the pathlib module that's easier to implement than the os module. 
 
 - [x] import pathlib  
 ``` 
@@ -42,7 +43,7 @@ Functions like ```Path()``` abstract the O.S. path structure and will use ```/``
 - [x] List specific files based on a pattern or wildcards
 ```list(DATA_DIR.glob(".git*"))``` Globbing is mainly used to match filenames or searching for content in a file. Globbing uses wildcard characters to create the pattern [linuxhint](https://linuxhint.com/bash_globbing_tutorial/)
 
-### PyFilesystem2
+#### PyFilesystem2
 PyFilesystem2 stand out from previous modules given that whenever we arrange a path we'll just use ```/``` separately from the O.S. for instance ``` DATA_DIR = fs .open_fs('../data/raw/') ```
 It generally resemble to prior modules when it comes to the basic functionalities.
 ```
@@ -57,5 +58,20 @@ Now if you want to iterate over pathname we can use the next function ``` walk.f
 for path in DATA_DIR.walk.files():
     print(path)
 ```
+#### pyprojroot & pyhere
+Pyprojroot and Pyhere are modules that allow us to set up a root on a fixed folder in that way we say that the path become a relative path since it has been picked up on purpose.  
+
+``` import pyprojroot``` to Find relative paths from a project root directory [chendaniely](https://github.com/chendaniely/pyprojroot/blob/master/README.md)
+
+```pyprojroot``` finds the root working directory for your project as a pathlib object. You can now use the here function to pass in a relative path from the project root directory (no matter what working directory you are in the project), and you will get a full path to the specified file. That is, in a jupyter notebook, you can write something like `pandas.read_csv(here('./data/my_data.csv'))` instead of `pandas.read_csv('../data/my_data.csv')`. This allows you to restructure the files in your project without having to worry about changing file paths.
+
+Great for reading and writing datasets!  
+  
+### install package
+```bash
+pip install pyprojroot
+```
+
+
 
 
